@@ -22,7 +22,7 @@ Scenario(
   },
 )
 
-Scenario('Tabuleiro inicia vazio', ({ I }) => {
+Scenario('Cadastro de produto com uma quantidade inválida', ({ I }) => {
   I.amOnPage('http://127.0.0.1:5500/e2e/produto/produto.html')
   I.fillField(CAMPO_DESCRICAO, 'Boneco')
   I.fillField(CAMPO_QUANTIDADE, '0')
@@ -31,7 +31,7 @@ Scenario('Tabuleiro inicia vazio', ({ I }) => {
   I.see('Quantidade deve ser um número positivo.')
 })
 
-Scenario('Tabuleiro inicia vazio', ({ I }) => {
+Scenario('Cadastro de produto com quantidade acima da permitida', ({ I }) => {
   I.fillField(CAMPO_DESCRICAO, 'Boneco')
   I.fillField(CAMPO_QUANTIDADE, '1001')
   I.fillField(CAMPO_PRECO, '100')
@@ -39,7 +39,7 @@ Scenario('Tabuleiro inicia vazio', ({ I }) => {
   I.see('Quantidade não deve ser superior a 1000.')
 })
 
-Scenario('Tabuleiro inicia vazio', ({ I }) => {
+Scenario('Cadastro de produto com valor inválido', ({ I }) => {
   I.fillField(CAMPO_DESCRICAO, 'Boneco')
   I.fillField(CAMPO_QUANTIDADE, '1001')
   I.fillField(CAMPO_PRECO, '0.00')
@@ -47,7 +47,7 @@ Scenario('Tabuleiro inicia vazio', ({ I }) => {
   I.see('Preço deve ser um número positivo.')
 })
 
-Scenario('Tabuleiro inicia vazio', ({ I }) => {
+Scenario('Cadastro de produto com valor superior ao permitido', ({ I }) => {
   I.fillField(CAMPO_DESCRICAO, 'Boneco')
   I.fillField(CAMPO_QUANTIDADE, '1001')
   I.fillField(CAMPO_PRECO, '5500.00')
