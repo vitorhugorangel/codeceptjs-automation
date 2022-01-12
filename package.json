@@ -1,0 +1,20 @@
+{
+  "name": "tsm-func",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx codeceptjs run --steps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "codeceptjs": "^3.2.2",
+    "playwright": "^1.17.1"
+  },
+  "dependencies": {
+    "nyc": "^15.1.0",
+    "v8-to-istanbul": "^8.1.0"
+  }
+}

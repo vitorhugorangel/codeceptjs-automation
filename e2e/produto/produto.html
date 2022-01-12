@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <link rel="stylesheet" type="text/css" href="produto.css" />
+</head>
+<body>
+
+    <form class="form" >
+        <h1>Produto</h1>
+        <input type="hidden" id="id" />
+        <label for="descricao" >Descrição</label>
+        <input type="text" id="descricao" class="field-long" />
+        <label for="quantidade" >Quantidade</label>
+        <input type="number" id="quantidade" />
+        <label for="preco" >Preço (R$)</label>
+        <input type="number" id="preco" />
+        <div class="painel" >
+            <button id="salvar" >Salvar</button>
+        </div>
+        <div id="mensagem" class="mensagem" ></div>
+    </form>
+    <script type="module" src="src/config.js" ></script>
+</body>
+</html>
